@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title text-center>
+      Taux
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item>
+      <ion-label color="dark" floating> Devise de base </ion-label>
+        <ion-select [(ngModel)]="devisedep">
+            <ion-option value="THB"> Baht </ion-option>
+            <ion-option value="DKK"> Couronne danoise </ion-option>
+            <ion-option value="NOK"> Couronne norvégienne </ion-option>
+            <ion-option value="SEK"> Couronne suédoise </ion-option>
+            <ion-option value="CZK"> Couronne tchèque </ion-option>
+            <ion-option value="AUD"> Dollar australien </ion-option>
+            <ion-option value="CAD"> Dollar canadien </ion-option>
+            <ion-option value="HKD"> Dollar de Hong Kong </ion-option>
+            <ion-option value="SGD"> Dollar de Singapour </ion-option>
+            <ion-option value="NZD"> Dollar néo-zélandais </ion-option>
+            <ion-option value="USD"> Dollar US </ion-option>
+            <ion-option value="EUR"> Euro </ion-option>
+            <ion-option value="HUF"> Forint hongrois </ion-option>
+            <ion-option value="CHF"> Franc suisse </ion-option>
+            <ion-option value="HRK"> Kuna croate </ion-option>
+            <ion-option value="RON"> Leu roumain </ion-option>
+            <ion-option value="BGN"> Lev bulgare </ion-option>
+            <ion-option value="TRY"> Livre </ion-option>
+            <ion-option value="GBP"> Livre sterling </ion-option>
+            <ion-option value="MXN"> Peso mexicain </ion-option>
+            <ion-option value="PHP"> Peso philippin </ion-option>
+            <ion-option value="ZAR"> Rand </ion-option>
+            <ion-option value="BRL"> Real brésilien </ion-option>
+            <ion-option value="MYR"> Ringgit </ion-option>
+            <ion-option value="RUB"> Rouble russe </ion-option>
+            <ion-option value="INR"> Roupie indienne </ion-option>
+            <ion-option value="IDR"> Rupiah </ion-option>
+            <ion-option value="ILS"> Shekel </ion-option>
+            <ion-option value="KRW"> Won sud-coréen </ion-option>
+            <ion-option value="JPY"> Yen </ion-option>
+            <ion-option value="CNY"> Yuan renminbi </ion-option>
+            <ion-option value="PLN"> Złoty polonais </ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label color="dark" floating> Devise de convertion </ion-label>
+        <ion-select [(ngModel)]="deviseret" multiple="true">
+            <ion-option value="THB"> Baht </ion-option>
+            <ion-option value="DKK"> Couronne danoise </ion-option>
+            <ion-option value="NOK"> Couronne norvégienne </ion-option>
+            <ion-option value="SEK"> Couronne suédoise </ion-option>
+            <ion-option value="CZK"> Couronne tchèque </ion-option>
+            <ion-option value="AUD"> Dollar australien </ion-option>
+            <ion-option value="CAD"> Dollar canadien </ion-option>
+            <ion-option value="HKD"> Dollar de Hong Kong </ion-option>
+            <ion-option value="SGD"> Dollar de Singapour </ion-option>
+            <ion-option value="NZD"> Dollar néo-zélandais </ion-option>
+            <ion-option value="USD"> Dollar US </ion-option>
+            <ion-option value="EUR"> Euro </ion-option>
+            <ion-option value="HUF"> Forint hongrois </ion-option>
+            <ion-option value="CHF"> Franc suisse </ion-option>
+            <ion-option value="HRK"> Kuna croate </ion-option>
+            <ion-option value="RON"> Leu roumain </ion-option>
+            <ion-option value="BGN"> Lev bulgare </ion-option>
+            <ion-option value="TRY"> Livre </ion-option>
+            <ion-option value="GBP"> Livre sterling </ion-option>
+            <ion-option value="MXN"> Peso mexicain </ion-option>
+            <ion-option value="PHP"> Peso philippin </ion-option>
+            <ion-option value="ZAR"> Rand </ion-option>
+            <ion-option value="BRL"> Real brésilien </ion-option>
+            <ion-option value="MYR"> Ringgit </ion-option>
+            <ion-option value="RUB"> Rouble russe </ion-option>
+            <ion-option value="INR"> Roupie indienne </ion-option>
+            <ion-option value="IDR"> Rupiah </ion-option>
+            <ion-option value="ILS"> Shekel </ion-option>
+            <ion-option value="KRW"> Won sud-coréen </ion-option>
+            <ion-option value="JPY"> Yen </ion-option>
+            <ion-option value="CNY"> Yuan renminbi </ion-option>
+            <ion-option value="PLN"> Złoty polonais </ion-option>
+        </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-content>
+  <button id="Execute" (tap)="alerter()" color="dark" ion-button> Execute </button>
+  </ion-content>
+
+</ion-content>
