@@ -96,13 +96,13 @@
           <div *ngIf="devisedepart && montant && deviseretour" id="retcont">
             <ion-list>
               <ion-item>
-              <label> 
-                {{ data.date }}
+              <label>
+                    {{ data.rates.EUR*montant }}     {{ deviseretour}}
               </label>
               </ion-item>
               <ion-item>
               <label>
-                
+               {{ data.date }}
               </label>  
               </ion-item>
            </ion-list>

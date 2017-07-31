@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 
 import { HomePage } from '../pages/home/home';
 //import { TauxPage } from '../pages/taux/taux';
-import { FixerModel } from '../models/fixer.model';
+//import { FixerModel } from '../models/fixer.model';
 
 
 import { Res }          from '../models/res.model';
@@ -31,7 +31,26 @@ export class FixerApiService {
     constructor(private http: Http){
         
     }
-    public getLatestRatesBasedOn(dvd: string, dvr: string, nb: number): Promise<any|FixerModel> {
+    /* public getLatestRatesBasedOn(dvd: string, dvr: string, nb: number): Promise<any|FixerModel> {
+            this.devisedepart = dvd ;
+            this.deviseretour = dvr;
+            this.montant = nb;
+
+        let url = `${this.baseUrl}?base=${this.devisedepart}&symbols=${this.deviseretour}`;
+        console.log('URL '+url);
+        console.log(this.devisedepart);
+        console.log(this.deviseretour);
+        console.log(this.montant);
+        return this.http.get(url)
+        .toPromise()
+        //.then(response => response.json() as FixerModel)
+        .then(response => response.json() as Response)
+        .catch(error => console.log('Une erreur est survenue! ' +error))
+
+    }       */
+
+
+    public getLatestRatesBasedOn(dvd: string, dvr: string, nb: number): Promise<any|Response> {
             this.devisedepart = dvd ;
             this.deviseretour = dvr;
             this.montant = nb;
@@ -48,6 +67,9 @@ export class FixerApiService {
         .catch(error => console.log('Une erreur est survenue! ' +error))
 
     }
+
+
+
    /* public getLatestRatesBasedOnAndReturn(dvdt: string, dvrt: string): Promise<any|FixerModel> {
             this.devisedep = dvdt ;
             this.deviseret = dvrt;

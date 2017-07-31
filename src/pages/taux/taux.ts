@@ -3,7 +3,7 @@ import { NavController, AlertController } from 'ionic-angular';
 
 import { HomePage } from '../home/home';
 import { FixerApiService } from '../../services/fixer.service';
-import { FixerModel } from '../../models/fixer.model';
+//import { FixerModel } from '../../models/fixer.model';
 
 @Component({
   selector: 'page-taux',
@@ -14,7 +14,7 @@ export class TauxPage {
   devisedep: string;
   deviseret: string;
 
-  dataT: FixerModel;
+  //dataT: FixerModel;
 
   constructor(public navCtrl: NavController, public alertCtrl: AlertController, private fixerApiService: FixerApiService) {
     console.log("Hello World");

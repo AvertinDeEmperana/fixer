@@ -3,7 +3,7 @@ import { NavController, AlertController } from 'ionic-angular';
 
 //import { TauxPage } from '../../pages/taux/taux';
 import { FixerApiService } from  '../../services/fixer.service'; 
-import { FixerModel } from '../../models/fixer.model';
+//import { FixerModel } from '../../models/fixer.model';
 
 import { Response } from '../../models/response.model';
 import { Res } from '../../models/res.model';
@@ -13,14 +13,14 @@ import { Res } from '../../models/res.model';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+  
     devisedepart: string;
     deviseretour: string;
     montant: number; 
-
+    
+    resd: Res; 
     data: Response = new Response();
-    //res : Res = new Res();
-
+   
   constructor(public navCtrl: NavController, public alertCtrl: AlertController, private fixerApiService: FixerApiService){  
 
                                              }
@@ -30,15 +30,16 @@ export class HomePage {
       subTitle: 'Execution de la requete! ',
       buttons: ['OK']
     });
-      
-      this.fixerApiService.getLatestRatesBasedOn(this.devisedepart, this.deviseretour, this.montant)
+       this.resd = new Res(this.deviseretour);
+       this.fixerApiService.getLatestRatesBasedOn(this.devisedepart, this.deviseretour, this.montant)
     .then(fixerFetched => { 
-      this.data = fixerFetched 
+      this.data = fixerFetched
       console.log(this.data);
-    
       console.log(this.data.rates);
+      console.log(this.resd.var)
+      console.log(this.data.rates.EUR);
     })
-    .catch(error => console.log('Erreur de l\'alerte' +error));      
+    .catch(error => console.log('Erreur de l\'alerte! ' +error));      
     alert.present();  
   }
 
