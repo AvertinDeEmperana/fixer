@@ -8,7 +8,7 @@ import { MyApp } from './app.component';
 
 //Pages
 import { HomePage } from '../pages/home/home';
-//import { TauxPage } from '../pages/taux/taux';
+import { TauxPage } from '../pages/taux/taux';
 
 import { FixerApiService } from  '../services/fixer.service';
 import { HttpModule } from "@angular/http";
@@ -17,8 +17,8 @@ import { HttpModule } from "@angular/http";
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
-    //TauxPage
+    HomePage,
+    TauxPage
   ],
   imports: [
     HttpModule,
@@ -28,8 +28,8 @@ import { HttpModule } from "@angular/http";
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
-//TauxPage
+    HomePage,
+    TauxPage
   ],
   providers: [
     FixerApiService,

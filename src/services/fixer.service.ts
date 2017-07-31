@@ -7,7 +7,7 @@ import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
 
 import { HomePage } from '../pages/home/home';
-//import { TauxPage } from '../pages/taux/taux';
+import { TauxPage } from '../pages/taux/taux';
 //import { FixerModel } from '../models/fixer.model';
 
 

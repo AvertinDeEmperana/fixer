@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 
-//import { TauxPage } from '../../pages/taux/taux';
+import { TauxPage } from '../../pages/taux/taux';
 import { FixerApiService } from  '../../services/fixer.service'; 
 //import { FixerModel } from '../../models/fixer.model';
 
@@ -43,9 +43,9 @@ export class HomePage {
     alert.present();  
   }
 
- /* private showTaux(){
+  private showTaux(){
     this.navCtrl.push(TauxPage);
 
-  } */
+  }
 
 }
